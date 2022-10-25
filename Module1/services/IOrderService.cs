@@ -7,6 +7,6 @@ public interface IOrderService
     Order FindOrderById(long id);
     Order AddNewOrder(Order order);
     Order UpdateOrder(Order order);
-    void PayForOrder(BankCredentials bankCredentials);
+    bool PayForOrder(Order order, BankCredentials bankCredentials);
     void NotifyBuyer(Order order);
 }
